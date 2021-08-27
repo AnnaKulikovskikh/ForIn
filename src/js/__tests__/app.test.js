@@ -9,13 +9,13 @@ const obj = {
 };
 
 test('sorting', () => {
-  const result = orderByProps(obj, ["name", "level"]);
+  const result = orderByProps(obj, ['name', 'level']);
   const expected = [
     { key: 'name', value: 'swordsman' },
     { key: 'level', value: 2 },
     { key: 'attack', value: 80 },
     { key: 'defence', value: 40 },
-    { key: 'health', value: 10 }
+    { key: 'health', value: 10 },
   ];
   expect(result).toEqual(expected);
 });

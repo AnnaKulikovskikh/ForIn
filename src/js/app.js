@@ -2,7 +2,9 @@
 export default function orderByProps(obj, sortOrder) {
   const arr1 = [];
   for (const i in obj) {
-    arr1.push(i);
+    if ({}.hasOwnProperty.call(obj, i)) {
+      arr1.push(i);
+    }
   }
   for (const i of sortOrder) {
     arr1.splice(arr1.indexOf(i), 1);
